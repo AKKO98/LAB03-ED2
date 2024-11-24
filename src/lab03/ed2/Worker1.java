@@ -49,7 +49,7 @@ public class Worker1 extends Worker {
                         socketWorker.close();
                         end = true;
                         println("<Worker_0> termino primero.");
-                        println("Conexion cerrada con <ClientServer> y <Worker_1>.");
+                        println("Conexion cerrada con <ClientServer> y <Worker_0>.");
                     }
 
                     while (!work.sorter.isFinished()) {

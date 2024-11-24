@@ -25,10 +25,10 @@ public class ClientServer {
 
         // Elegir algoritmo
         System.out.println("Seleccione el algoritmo: ");
-        System.out.println("1. QuickSort\n2. MergeSort\n3. HeapSort");
+        System.out.print("1. QuickSort\n2. MergeSort\n3. HeapSort \n-> ");
         choice = scanner.nextInt();
 
-        System.out.print("Ingrese el tiempo límite para cada worker (en segundos): \n");
+        System.out.print("Ingrese el tiempo límite para cada worker (en segundos). \n-> ");
         t = scanner.nextInt();
 
         // Generar vector aleatorio
