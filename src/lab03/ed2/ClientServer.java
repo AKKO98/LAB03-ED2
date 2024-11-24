@@ -19,23 +19,23 @@ public class ClientServer {
         Scanner scanner = new Scanner(System.in);
         int n = 5000000;
         int t = 1;
-        int choice = 3;
+        int choice = 1;
         int count = 0;
         String rutaArchivo = "datos.txt";
 
         // Elegir algoritmo
         System.out.println("Seleccione el algoritmo: ");
         System.out.println("1. QuickSort\n2. MergeSort\n3. HeapSort");
-        //choice = scanner.nextInt();
+        choice = scanner.nextInt();
 
         System.out.print("Ingrese el tiempo límite para cada worker (en segundos): \n");
-        //t = scanner.nextInt();
+        t = scanner.nextInt();
 
         // Generar vector aleatorio
         int[] vector;
         vector = leerVectorDesdeArchivo(rutaArchivo);
         Task task = new Task(vector, choice, t);
-
+        System.out.println("Esperando para nuevas conexiones...");
         //Procesamiento de datos con los Worker_0 y Worker_1
         try {
             ServerSocket serverSocket = new ServerSocket(SERVER_PORT);
